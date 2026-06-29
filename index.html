@@ -3,62 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Image Gallery</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Image Gallery</h1>
+<div class="calculator">
 
-    <!-- Filter Buttons -->
-    <div class="filter-buttons">
-        <button class="active" data-filter="all">All</button>
-        <button data-filter="nature">Nature</button>
-        <button data-filter="city">City</button>
-        <button data-filter="animals">Animals</button>
-    </div>
+    <input type="text" id="display" class="display" readonly>
 
-    <!-- Gallery -->
-    <div class="gallery">
+    <div class="buttons">
 
-        <div class="gallery-item nature">
-            <img src="https://picsum.photos/id/1015/600/400" alt="">
-        </div>
+        <button class="clear" onclick="clearDisplay()">C</button>
+        <button class="backspace" onclick="backspace()">⌫</button>
+        <button class="operator" onclick="append('/')">/</button>
+        <button class="operator" onclick="append('*')">×</button>
 
-        <div class="gallery-item city">
-            <img src="https://picsum.photos/id/1011/600/400" alt="">
-        </div>
+        <button class="number" onclick="append('7')">7</button>
+        <button class="number" onclick="append('8')">8</button>
+        <button class="number" onclick="append('9')">9</button>
+        <button class="operator" onclick="append('-')">−</button>
 
-        <div class="gallery-item animals">
-            <img src="https://picsum.photos/id/1025/600/400" alt="">
-        </div>
+        <button class="number" onclick="append('4')">4</button>
+        <button class="number" onclick="append('5')">5</button>
+        <button class="number" onclick="append('6')">6</button>
+        <button class="operator" onclick="append('+')">+</button>
 
-        <div class="gallery-item nature">
-            <img src="https://picsum.photos/id/1039/600/400" alt="">
-        </div>
+        <button class="number" onclick="append('1')">1</button>
+        <button class="number" onclick="append('2')">2</button>
+        <button class="number" onclick="append('3')">3</button>
+        <button class="number" onclick="append('.')">.</button>
 
-        <div class="gallery-item city">
-            <img src="https://picsum.photos/id/1043/600/400" alt="">
-        </div>
-
-        <div class="gallery-item animals">
-            <img src="https://picsum.photos/id/237/600/400" alt="">
-        </div>
+        <button class="number" onclick="append('0')">0</button>
+        <button class="equal" onclick="calculate()">=</button>
 
     </div>
 
-    <!-- Lightbox -->
-    <div class="lightbox">
-        <span class="close">&times;</span>
+</div>
 
-        <button class="prev">&#10094;</button>
-
-        <img class="lightbox-img" src="" alt="">
-
-        <button class="next">&#10095;</button>
-    </div>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
